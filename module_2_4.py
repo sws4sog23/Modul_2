@@ -9,11 +9,11 @@ for i in numbers:
         continue
     for j in range(2, i):
         is_prime = bool(i % j)
-        if is_prime is False:
-            not_primes.append(i)
-            break
         if is_prime is True and j < i - 1:
             continue
+        elif is_prime is False:
+            not_primes.append(i)
+            break
         else:
             primes.append(i)
 print(primes)
